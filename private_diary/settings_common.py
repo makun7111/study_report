@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'static'),
 )
+
+MESSAGE_TAGS={
+    messages.ERROR:'messages',
+    messages.WARNING:'alert-warning',
+    messages.SUCCESS:'alert aler-success',
+    messages.INFO:'alert alert-info',
+}
+
+AUTH_USER_MODEL='accounts.CustomUser'

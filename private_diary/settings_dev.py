@@ -34,10 +34,12 @@ LOGGING={
         'dev':{
             'format':'\t'.join([
                 '%(asctime)s',
-                '[%(leveltime)s]',
+                '[%(levelname)s]',
                 '%(pathname)s(Line:%(lineno)d)',
                 '%(message)s'
             ])
         },
     }
 }
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
