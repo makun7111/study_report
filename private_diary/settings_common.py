@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':'private_diary',
-        'USER':os.environ.get('DB_USER'),
-        'PASSWORD':os.environ.get('DB_PASSWORD'),
+        'USER':'postgres',
+        'PASSWORD':'maumau1010',
         'HOST':'',
         'PORT':'',
     }
@@ -148,7 +148,7 @@ AUTH_USER_MODEL='accounts.CustomUser'
 SITE_ID=1
 
 AUTHENTICATION_BACKENDS=(
-    'allauth.account.auth_backends.AuthenticationBackend'
+    'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend'
 )
 
@@ -166,3 +166,7 @@ ACCOUNT_LOGOUT_ON_GET=True
 ACCOUNT_EMAIL_SUBJECT_PREFIX=''
 
 DEFAULT_FROM_EMAIL=os.environ.get('FROM_EMAIL')
+
+MEDIA_URL='/media/'
+
+LOGIN_REDIRECT_URL='diary:diary_list'

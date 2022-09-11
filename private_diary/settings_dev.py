@@ -4,7 +4,7 @@ SECRET_KEY = 'django-insecure-bt(00h8k#9a3e%ya%1zu=n6$ljlqp8$w5@g7_ubo@agd0!-1vr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOGGING={
     'version':1,
@@ -43,3 +43,5 @@ LOGGING={
 }
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
