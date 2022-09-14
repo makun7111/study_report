@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':'private_diary',
-        'USER':'postgres',
-        'PASSWORD':'maumau1010',
+        'USER':'DB_USER',
+        'PASSWORD':'DB_PASSWORD',
         'HOST':'',
         'PORT':'',
     }
