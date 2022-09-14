@@ -83,7 +83,7 @@ DATABASES = {
         'NAME':'private_diary',
         'USER':'DB_USER',
         'PASSWORD':'DB_PASSWORD',
-        'HOST':'localhost',
+        'HOST':'',
         'PORT':'',
     }
 }
