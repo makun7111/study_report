@@ -16,22 +16,23 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-        'loggers': {
-            'django': {
-                'handlers': ['file'],
-                'level': 'INFO',
-            },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'level':'INFO',
+        },
+
 # diaryアプリケーションが利用するロガー
             'diary': {
                 'handlers': ['file'],
                 'level': 'INFO',
             },
-            },
+        },
 #23 ハンドラの設定
             'handlers': {
                 'file': {
                     'level': 'INFO',
-                    'class': 'logging.handlers.Timed2RotatingFileHandler',
+                    'class': 'logging.handlers.TimedRotatingFileHandler',
                     'filename': os.path.join(BASE_DIR, 'logs/django.log'),
                     'formatter': 'prod',
                     'when': 'D', # ログローテーション(新しいロ ファイルへの切り替え)間隔の単位(D=日)
