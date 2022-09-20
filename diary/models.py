@@ -8,6 +8,7 @@ class Diary(models. Model):
     photo1 = models.ImageField(verbose_name='写真　1',blank=True, null=True)
     photo2 = models.ImageField(verbose_name='写真　2',blank=True, null=True)
     photo3 = models.ImageField(verbose_name='写真　3',blank=True, null=True)
+    time= models.DurationField(verbose_name="時間",blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日時',auto_now=True)
 
