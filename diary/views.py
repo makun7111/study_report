@@ -20,7 +20,7 @@ class OnlyYouMixin(UserPassesTestMixin):
 class IndexView(generic.TemplateView):
     template_name="index.html"
     def sum(self,request):
-        topics = Diary.objects.all().aggregate(Sum("time"))
+        topics = Diary.objects.all().aggregate(Sum(int("time")))
         return render(request, "index.html", topics)
 
 logger=logging.getLogger(__name__)
