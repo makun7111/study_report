@@ -9,6 +9,7 @@ from.forms import InquiryForm
 from django.contrib import messages
 from .forms import InquiryForm,DiaryCreateForm
 from django.shortcuts import get_object_or_404
+from django.db.models import Sum
 
 class OnlyYouMixin(UserPassesTestMixin):
     raise_exeption=True
@@ -18,6 +19,9 @@ class OnlyYouMixin(UserPassesTestMixin):
 
 class IndexView(generic.TemplateView):
     template_name="index.html"
+    def sum(self,request):
+        topics = Diary.objects.all().aggregate(Sum("time"))
+        return render(request, "index.html", topics)
 
 logger=logging.getLogger(__name__)
 class InquiryView(generic.FormView):
