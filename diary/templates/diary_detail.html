@@ -18,31 +18,29 @@
             <strong>本文 </strong>
         </div>
         <div class="col-9">
-            {{ object.content|linebreaksbr }}
+            {{ object.comment|linebreaksbr }}
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-3">
-            <strong> 写真</strong>
+            <strong>勉強時間</strong>
         </div>
-        <div class="col-3">
-            {% if object.photo1 %}
-            <img src="{{ object.photo1.url}}" width="200" height="200"/>
-            {% endif %}
-        </div>
-        <div class="col-3">
-            {% if object.photo2 %}
-            <img src="{{ object.photo2.url}}" width="200" height="200"/>
-            {% endif %}
-        </div>
-        <div class="col-3">
-            {% if object.photo3 %}
-            <img src="{{ object.photo3.url }}" width="200" height="200"/>
-            {% endif %}
+        <div class="col-9">
+            {{ object.time }}
         </div>
     </div>
     <hr>
+    <div class="row">
+        <div class="col-3">
+            <strong>教材</strong>
+        </div>
+        <div class="col-9">
+            {{ object.materials }}
+        </div>
+    </div>
+    <hr>
+
     <div class="row">
         <div class="col-3">
             <strong>作成日時 </strong>
