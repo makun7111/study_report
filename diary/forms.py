@@ -44,7 +44,7 @@ class DiaryCreateForm(forms.ModelForm):
 
 
 
-        fields = ('title','content','photo1','photo2','photo3',)
+        fields = ('title','content','studytime','photo1','photo2','photo3',)
 
 
     def __init__(self, *args, **kwargs):
