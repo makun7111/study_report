@@ -42,7 +42,7 @@ class DiaryCreateForm(forms.ModelForm):
     class Meta:
         model = Diary
 
-        
+
 
         fields = ('title','content','photo1','photo2','photo3',)
 
