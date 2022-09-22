@@ -19,6 +19,7 @@ class OnlyYouMixin(UserPassesTestMixin):
 class IndexView(generic.TemplateView):
     template_name="index.html"
 
+
 logger=logging.getLogger(__name__)
 class InquiryView(generic.FormView):
     template_name="inquiry.html"
