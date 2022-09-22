@@ -41,7 +41,7 @@ class InquiryForm(forms.Form):
 class DiaryCreateForm(forms.ModelForm):
     class Meta:
         model = Diary
-        fields = ('title','time','materials','comment')
+        fields = ('title','comment','time','materials',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
