@@ -16,7 +16,7 @@
             <div class="post-preview">
                 <a href="{% url 'diary:diary_detail' diary.pk %}">
                     <h2 class="post-title">{{ diary.title }} </h2>
-                    <h3 class="post-subtitle">{{ diary.time|truncatechars:20 }}時間 </h3>
+                    <h3 class="post-subtitle">{{ diary.content|truncatechars:20 }} </h3>
                 </a>
                 <p class="post-meta">{{ diary.created_at }}</p>
             </div> <hr class="my-4">
