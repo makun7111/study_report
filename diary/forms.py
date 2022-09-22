@@ -41,11 +41,11 @@ class InquiryForm(forms.Form):
 class DiaryCreateForm(forms.ModelForm):
     class Meta:
         model = Diary
-<<<<<<< HEAD
+
         fields = ('title','comment','time','materials',)
-=======
+
         fields = ('title','content','photo1','photo2','photo3',)
->>>>>>> parent of d539f9d (フォームを勉強に)
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
