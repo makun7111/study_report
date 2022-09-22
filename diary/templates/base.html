@@ -24,7 +24,7 @@
 <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="{% url 'diary:index'%}">PRIVATE ĐIARY</a>
+                <a class="navbar-brand" href="{% url 'diary:index'%}">study management</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle ="collapse" data-bs-target="#navbarResponsive" aria-controls="navba rResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto">
@@ -33,7 +33,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% block active_diary_list %}{% endblock %}" href="{% url 'diary:diary_list' %}">DIARY LIST</a>
+                            <a class="nav-link {% block active_diary_list %}{% endblock %}" href="{% url 'diary:diary_list' %}">results LIST</a>
                         </li>
                         {% endif %}
                     </ul>
@@ -75,7 +75,7 @@
 <!-- Footer -->
         <footer class="py-5 bg-black">
 <div class="container px-5">
-    <p class="m- text-center textwhite small">Copyright &copy; Private Đairy 2021</p></div>
+    <p class="m- text-center textwhite small">Copyright &copy; study management 2021</p></div>
         </footer>
 <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/ js/bootstrap.bundle.min.js"></script>

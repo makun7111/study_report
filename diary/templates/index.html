@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 
 {% load static %}
-{% block title %}Web上にあなた専用の日記ぺ－ジを保存できるサービス|Private Diary{% endblock title %}
+{% block title %}Web上にあなたの勉強成果を記録{% endblock title %}
 
 {% block header %}
 <header class="masthead text-center text-white">
     <div class="masthead-content">
         <div class="container">
-            <h1 class="masthead-heading mb-6">Private Diary</h1>
+            <h1 class="masthead-heading mb-6">勉強成果記録アプリ</h1>
 
-            <h2 class="masthead-subheading mb-8"> 時間</h2>
+            <h2 class="masthead-subheading mb-8"></h2>
 
-            <h2 class="masthead-subheading mb-8"> あなた専用の日記サービス</h2>
 
             <a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pille mt-5">LOG IN</a>
         </div>
@@ -35,8 +34,8 @@
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-4">Web Diary</h2>
-                    <p>Web上で作成/編集/削除ができる日記</p>
+                    <h2 class="display-4">study management</h2>
+                    <p>Web上で勉強成果を記録</p>
                 </div>
             </div>
         </div>
@@ -54,8 +53,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="p-5">
-                    <h2 class="display-4">Save Your Diary</h2>
-                    <p>あなたの日記をWebに保存</p>
+                    <h2 class="display-4">Membership System</h2>
+                    <p>会員ごとに成果を記録</p>
                 </div>
             </div>
         </div>
@@ -71,8 +70,8 @@
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-4">Membership System</h2>
-                    <p>会員制のWeb日記サービス</p>
+                    <h2 class="display-4">Confirmation of results</h2>
+                    <p>いつでも過去の記録を確認</p>
                 </div>
             </div>
         </div>
