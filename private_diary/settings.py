@@ -1,6 +1,8 @@
 from .settings_common import *
 #本番運用環境用にセキュリティキーを生成し環境変数から読み込む
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+AWS_SES_REGION_NAME = 'us-east-1'
+AWS_SES_REGION_ENDPOINT = 'email.us-east-1.amazonaws.com'
 # デバッグモードを有効にするかどうか (本番運用では必ずFalseにする)
 DEBUG = False
 # 許可するホスト名のリスト
