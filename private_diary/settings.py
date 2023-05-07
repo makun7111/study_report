@@ -11,8 +11,8 @@ ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 STATIC_ROOT = '/usr/share/nginx/html/static'
 MEDIA_ROOT = '/usr/share/nginx/html/media'
  #Amazon SES関連設定
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = 'AKIA56Y4XT7SDVPWWEWB'
+AWS_SECRET_ACCESS_KEY = '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'
 EMAIL_BACKEND = 'django_ses.SESBackend'
 #3 ロギング
 LOGGING = {
